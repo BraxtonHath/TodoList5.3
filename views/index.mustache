@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>task</h1>
+
+
+
+
+    <form class="" action="/" method="post">
+      <input type="text" name="todoInput" value="" placeholder="task">
+      <input type="submit" name="" value="Send">
+    </form>
+
+
+
+
+
+    {{#todoList}}
+      <form class="" action="/todo/{{todoId}}" method="post">
+        <input type="submit" name="todoItem" value="done">
+        <label for="todoItem" name="todoLable">{{.}}</label>
+      </form>
+    {{/todoList}}
+
+
+
+
+    <h2>Completed</h2>
+    {{#completed}}
+    <p>{{.}}</p>
+    {{/completed}}
+
+  </body>
+</html>
